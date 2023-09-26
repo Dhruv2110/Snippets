@@ -1,0 +1,10 @@
+// INSTALL RUBY
+sudo apt install ruby ruby-dev
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+sudo apt-get update
+sudo apt-get install build-essential
+
+sudo gem install fastlane -NV

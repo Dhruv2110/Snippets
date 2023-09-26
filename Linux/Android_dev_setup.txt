@@ -1,0 +1,23 @@
+// INSTALL JAVA //
+sudo apt-get install openjdk-17-jdk
+
+sudo apt-get update
+
+// INSTALL SDK BUILD TOOLS //
+sudo apt-get -y install android-sdk-build-tools
+
+sdkmanager --install "platform-tools" "platforms;android-29" "build-tools;33.0.0" "ndk;23.1.7779620" "cmdline-tools;latest" "emulator"
+
+// ADD PATHS TO ~/.bashrc FILE //
+export ANDROID_HOME=/usr/lib/android-sdk
+export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
+export PATH=$ANDROID_HOME/emulator/:$PATH
+export PATH=$ANDROID_HOME/platform-tools/:$PATH
+
+// FETCH ANDROID COMMAND-LINE-TOOLS //
+wget https://dl.google.com/android/repository/commandlinetools-linux-10406996_latest.zip
+
+sudo chmod -R a+w /usr/lib/android-sdk
+
+// ADD PATH TO /android/local.properties file //
+sdk.dir = /usr/lib/android-sdk
